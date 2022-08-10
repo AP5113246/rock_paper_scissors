@@ -24,7 +24,7 @@ def runGame():
             print(f"{user_input} is an invalid input")
             continue
         else:
-            print("+++++ COMPUTER CHOOSING +++++ ")
+            print("+++++ COMPUTER CHOOSING +++++\n\n ")
             #Otherwise we start the game
             computer_choice = choices[random.randint(0,2)]
             print(f"The computer chooses {computer_choice} !")
@@ -40,10 +40,10 @@ def runGame():
 
 def checkForWinner(user_wins,computer_wins):
     if(computer_wins == best_out_of_value):
-        print("Computer wins")
+        print("++++Computer wins++++")
         return True
     elif(user_wins == best_out_of_value):
-        print("User wins")
+        print("++++User wins++++")
         return True
     return False
 
@@ -52,12 +52,12 @@ def checkForWinner(user_wins,computer_wins):
 def runRound(user_input, computer_choice):
     global user_wins,computer_wins
     if user_input == computer_choice:
-        print("It's a draw !")
+        print("It's a draw !\n\n")
     elif userWins(user_input,computer_choice):
         user_wins += 1
-        print("You won that round !")
+        print("You won that round \n\n!")
     else:
-        print("Computer has won the round !")
+        print("Computer has won the round !\n\n")
         computer_wins += 1
     
 
@@ -70,9 +70,6 @@ def userWins(user_input,computer_choice):
         return True
     return False
         
-    
-    
-    
 
 #Get's the winning condition for the game
 def getBestTo():
